@@ -1,0 +1,13 @@
+CREATING A PROJECT FOR THE CLIENT VOTING SYSTEM
+================================================================================
+I think when working with a large project like this keeping notes and code documentation as well as
+a list of all the possible methods of doing things in each class will be crucial so I need to focus
+on separating the components of the entire Client component into its two main functionalities:
+    ->Creating the Graphical User Interface that we will use to then ensure we are able to create
+    the methods and components that will capture our user input;
+    ->The Client Network portion will facilitate the fact that we are able to pass in the values 
+    from the GUI into the Server via the Streams that are connecting it and the server, so we will 
+    work on this shortly;
+
+
+==================================================================================================

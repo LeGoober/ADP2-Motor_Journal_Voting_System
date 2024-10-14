@@ -8,6 +8,23 @@ public class ClientSocket {
     protected static ObjectOutputStream output;
     
     public ClientSocket(){
-            server_connection = new Socket();        
+        try{
+            server_connection = new Socket("127.0.0.1",2020);    
+        }
+        catch(IOException ioe){
+            System.out.println(ioe.getMessage());
+        }
+    }
+    
+    public void serverProcessor(){
+        try{
+        output = new ObjectOutputStream(server_connection.getOutputStream());
+        input = new ObjectInputStream(server_connection.getInputStream());
+        
+        }
+        catch(IOException ioe){
+        
+        }
+        
     }
 }
