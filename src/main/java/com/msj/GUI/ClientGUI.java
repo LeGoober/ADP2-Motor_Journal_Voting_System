@@ -3,8 +3,6 @@ import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 import javax.swing.table.DefaultTableModel;
-import java.sql.*;
-import java.util.*;
 import java.io.*;
 
 public class ClientGUI extends JFrame implements ActionListener{
@@ -57,7 +55,7 @@ public class ClientGUI extends JFrame implements ActionListener{
             }
         };
         //Setting up the background images 
-        background_image = new ImageIcon("C:/Users/roris/Documents/NetBeansProjects/ADP2-Motor_Sport_Journal-Client/src/homepage.png").getImage();
+        background_image = new ImageIcon("C:/Users/roris/Documents/NetBeansProjects/ADP2-Motor_Sport_Journal-Client/src/home_screen.png").getImage();
         selection_screen = new ImageIcon("C:/Users/roris/Documents/NetBeansProjects/ADP2-Motor_Sport_Journal-Client/src/voting_selection_pages.png").getImage();
         vintage_car_voting_screen = new ImageIcon("C:/Users/roris/Documents/NetBeansProjects/ADP2-Motor_Sport_Journal-Client/src/vote_selection-modern.png").getImage();
         modern_car_voting_screen = new ImageIcon("C:/Users/roris/Documents/NetBeansProjects/ADP2-Motor_Sport_Journal-Client/src/vote_selection-vintage.png").getImage();
@@ -68,28 +66,32 @@ public class ClientGUI extends JFrame implements ActionListener{
         btn_return_selection_page.setOpaque(false);
         btn_return_selection_page.setBounds(0,0, 100, 200);
 
+        //Buttons for the Selection Page GUI and ensuring that components are transparent
         btn_selection_page_mvote = new JButton("Vote From the Vintage Selection");
         btn_selection_page_mvote.setContentAreaFilled(false);
         btn_selection_page_mvote.setOpaque(false);
         btn_selection_page_mvote.setBounds(120, 0, 100, 200);
         //calling the setGUI method in the Constructor so that we create instance on main method run
         setGUI();
+        setSize(1200, 750);
+        setVisible(true);
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         
     }
     public void setGUI(){
         pnl_homepage.setLayout(new BorderLayout());
-        pnl_selection_screen.setLayout(new BorderLayout());
-        pnl_vintage_car_vote.setLayout(new BorderLayout());
-        pnl_modern_car_vote.setLayout(new BorderLayout());
-        
+//        pnl_selection_screen.setLayout(new BorderLayout());
+//        pnl_vintage_car_vote.setLayout(new BorderLayout());
+//        pnl_modern_car_vote.setLayout(new BorderLayout());
+//        
         pnl_modern_car_vote.add(btn_return_selection_page);
         
         pnl_selection_screen.add(btn_selection_page_mvote);
         
         this.add(pnl_homepage);
-        this.add(pnl_selection_screen);
-        this.add(pnl_vintage_car_vote);
-        this.add(pnl_modern_car_vote);
+//        this.add(pnl_selection_screen);
+//        this.add(pnl_vintage_car_vote);
+//        this.add(pnl_modern_car_vote);
         
         
     }
@@ -97,7 +99,7 @@ public class ClientGUI extends JFrame implements ActionListener{
     @Override
     public void actionPerformed(ActionEvent e){
         if(e.getSource() == btn_selection_page_mvote){
-            
+            VoteSelectionPage vsp = new VoteSelectionPage();
         }
     }
     
