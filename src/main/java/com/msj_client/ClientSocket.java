@@ -23,8 +23,17 @@ public class ClientSocket {
         
         }
         catch(IOException ioe){
-        
+            System.out.println(ioe.getMessage());
         }
-        
     }
+        // Method to send a vote to the server
+    public void sendVote(String carVote) {
+        try {
+            output.writeObject(carVote); // Send the vote string to the server
+            output.flush(); // Ensure all data is sent
+        } catch (IOException ioe) {
+            System.out.println("Error sending vote: " + ioe.getMessage());
+        }
+    }
+    
 }

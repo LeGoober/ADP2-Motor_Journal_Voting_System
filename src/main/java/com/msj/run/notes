@@ -11,3 +11,9 @@ on separating the components of the entire Client component into its two main fu
 
 
 ==================================================================================================
+
+
+[SERVER SIDE LOGIC]
+->With
+
+//Preload the notes within the database

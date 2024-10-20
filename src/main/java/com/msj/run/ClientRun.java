@@ -1,10 +1,10 @@
 package com.msj.run;
 
-import com.msj.GUI.ClientGUI;
+import com.msj.GUI.HomeScreen;
 import javax.swing.JFrame;
 
 public class ClientRun {
     public static void main(String[] args) {
-        ClientGUI client = new ClientGUI();
+        HomeScreen client = new HomeScreen();
         }
 }
